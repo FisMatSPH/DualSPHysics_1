@@ -1,0 +1,202 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2023 by
+ Dr Jose M. Dominguez Alonso, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira, Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Dr Orlando Garcia Feal, Ivan Martinez Estevez,
+ Dr Joseph O'Connor, Dr Aaron English
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+ Free download source files and documentation from DualSPHysics website (http://dual.sphysics.org).
+ Full list of developers and contributors is available at https://dual.sphysics.org/developers
+ Properly cite the use of DualSPHysics (Dominguez et al., 2022) (https://dual.sphysics.org/references).
+
+
+DualSPHysics5 v5.2.274 (02-02-2024)
+====================================
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 11.2 / 11.7
+ 
+Device 0: "Tesla K20c"
+  CUDA Capability Major....: 3.5
+  Global memory............: 4738 MBytes
+  CUDA Cores...............: 2496 (13 Multiprocessors, 192 CUDA Cores/MP)
+  GPU Max Clock rate.......: 706 MHz (0.71 GHz)
+  Memory Clock rate........: 2600 Mhz
+  Memory Bus Width.........: 320-bit
+  L2 Cache Size............: 1280 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 2 copy engine(s)
+  Run time limit on kernels...............: No
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Enabled
+  CUDA Device Driver Mode (TCC or WDDM)...: TCC (Tesla Compute Cluster Driver)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 5 / 0
+  Device supports P2P and RDMA............: Yes
+  Device supports P2P from/to GPUs........: 
+ 
+[GPU Hardware]
+Device default: 0 "Tesla K20c"
+Compute capability: 3.5
+Memory global: 4737 MB
+Memory shared: 49152 Bytes
+ 
+[Initialising JSphGpuSingle  17-06-2024 13:44:49]
+ProgramFile=".../bin/windows/DualSPHysics5.2_win64.exe"
+ExecutionDir=".../examples/inletoutlet/01_FlowCylinder"
+XmlFile=".../01_FlowCylinder/CaseFlowCylinder_Re200_out/CaseFlowCylinder_Re200.xml"
+OutputDir=".../inletoutlet/01_FlowCylinder/CaseFlowCylinder_Re200_out"
+OutputDataDir=".../01_FlowCylinder/CaseFlowCylinder_Re200_out/data"
+XML-App: GenCase v5.0.278c (30-10-2023)
+XML-Vars (uservars + ctes): MResId=[0]  CaseName=["CaseFlowCylinder_Re200"]  Data2D=[1]  Data2DPosy=[0]  H=[0.0002]  KernelSize=[0.0004]  B=[34071.4]  Gamma=[7]  Rhop0=[1060]  Dp=[0.0001]  Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[0]  MassFluid=[1.06e-05]  MassBound=[1.06e-05]
+
+*** WARNING: The option DDT:2 is equal to DDT:1 when gravity.z is zero.
+
+XML-Vars (parameters): TimeMax=[2.7]  TimeOut=[0.02]
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 4920
+MapRealPos(border)=(-5e-05,-1e-05,-1e-05)-(0.01195,1e-05,0.00401)
+MapRealPos(final)=(-5e-05,-1e-05,-1e-05)-(0.01195,1e-05,0.00401)
+**Initial state of particles is loaded
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.000400  (1 x KernelSize)
+**2D-Simulation parameters:
+CaseName="CaseFlowCylinder_Re200"
+RunName="CaseFlowCylinder_Re200"
+Simulate2DPosY=0
+Symmetry=False
+SavePosDouble=False
+SvExtraParts=""
+SaveFtAce=False
+SvTimers=True
+Boundary="mDBC"
+  SlipMode="DBC vel=0"
+  mDBC-Corrector=False
+  mDBC-FastSingle=True
+  mDBC-Threshold=0
+StepAlgorithm="Symplectic"
+Kernel="Wendland"
+  Wendland.awen=1.392500e+07
+  Wendland.bwen=-3.481500e+11
+Viscosity="Laminar+SPS"
+  Visco=0.0035
+  ViscoBoundFactor=1
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.1
+Shifting="Full"
+  ShiftCoef=-20
+  ShiftTFS=0 (disabled)
+  ShiftDomain="Full"
+RigidAlgorithm="None"
+FloatingCount=0
+CaseNp=4920
+CaseNbound=1248
+CaseNfixed=648
+CaseNmoving=600
+CaseNfloat=0
+CaseNfluid=3672
+PeriodicActive="Axis-X"
+PeriodicXinc=(-0.012,0,0)
+Dp=0.0001
+KernelH=0.000200  (CoefficientH=1.41421; H/Dp=2)
+KernelSize=0.0004
+CteB=34071.43
+Gamma=7
+RhopZero=1060
+Cs0=15.0000002456761
+CFLnumber=0.2
+DtIni=1.333333277812626e-05
+DtMin=6.666666488404199e-07
+DtAllParticles=False
+MassFluid=0.0000106
+MassBound=0.0000106
+SpsSmag=7.200000e-11
+SpsBlin=2.200000e-11
+TimeMax=2.7
+TimePart=0.02
+Gravity=(0,0,0)
+NpMinimum=1248
+RhopOut=True
+RhopOutMin=700
+RhopOutMax=1300
+WrnPartsOut=True
+CellMode="Full"
+ScellDiv=1
+MapCells=(33,1,11)
+CellDomFixed=False
+**Requested GPU memory for 5048 particles: 1.2 MB (0 times).
+
+*** WARNING: There are 648 of 1248 fixed or moving boundary particles without normal data.
+
+DomCells=(33,1,11)
+DomCellCode="1+13_8_10"
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (40 regs)
+  BsForcesFluid=128 (78 regs)
+ 
+**JSphGpu: Requesting gpu memory for 5336 particles: 1.3 MB.
+**JSphGpu: Requesting gpu memory for 5638 particles: 1.3 MB.
+**CellDiv: Requested gpu memory for 5638 particles: 0.0 MB.
+**CellDiv: Requested gpu memory for 792 cells (CellMode=Full): 0.0 MB.
+ 
+RunMode="Pos-Cell - Single-GPU"
+ 
+Particle summary:
+  Fixed....: 648  id:(0-647)   MKs:1 (5)
+  Moving...: 600  id:(648-1247)   MKs:2 (6-7)
+  Floating.: 0
+  Fluid....: 3672  id:(1248-4919)   MKs:1 (1)
+
+Total particles: 4920 (bound=1248 (fx=648 mv=600 ft=0) fluid=3672)
+Total MK blocks: 4 (bound=3 (fx=1 mv=2 ft=0) fluid=1)
+ 
+Initialization configuration:
+Initialize_0
+  Operation: BoundNormalPlane
+  MkBound..: 1 (360 particles)
+  Point....: Automatic
+  Normal...: (0,0,1)
+  MaxDistH.: 2
+Initialize_1
+  Operation: BoundNormalPlane
+  MkBound..: 2 (240 particles)
+  Point....: Automatic
+  Normal...: (0,0,-1)
+  MaxDistH.: 2
+ 
+Initialising InOut...
+
+*** Exception (JXml::ErrReadAtrib) at DualSPHysics/source/JXml.cpp:257
+Text: Error reading xml - Value of 'mkfluid' invalid. No particles data with mkfluid=1 to define inout points.
+File: CaseFlowCylinder_Re200_out/CaseFlowCylinder_Re200.xml(row:116)
+
+
+Finished execution (code=1).
+
